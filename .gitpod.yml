@@ -1,0 +1,11 @@
+tasks:
+  - init: docker compose -f docker.compose.yml up -d --build
+    command: echo "All services started"
+
+ports:
+  - port: 3000
+    onOpen: open-browser
+  - port: 8000
+    onOpen: notify
+  - port: 9090
+    onOpen: notify
