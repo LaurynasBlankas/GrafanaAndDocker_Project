@@ -9,7 +9,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "fieldConfig": {
         "defaults": { "color": { "mode": "palette-classic" }, "unit": "reqps" },
         "overrides": []
@@ -19,7 +19,7 @@
       "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "single" } },
       "targets": [
         {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "rate(app_requests_total[1m])",
           "legendFormat": "{{endpoint}}",
           "refId": "A"
@@ -29,7 +29,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "fieldConfig": {
         "defaults": { "color": { "mode": "palette-classic" }, "unit": "s" },
         "overrides": []
@@ -39,7 +39,7 @@
       "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "single" } },
       "targets": [
         {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "rate(app_request_latency_seconds_sum[1m]) / rate(app_request_latency_seconds_count[1m])",
           "legendFormat": "{{endpoint}}",
           "refId": "A"
