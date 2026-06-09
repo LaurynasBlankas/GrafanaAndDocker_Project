@@ -47,7 +47,27 @@
       ],
       "title": "Average latency per endpoint",
       "type": "timeseries"
+    },
+    {
+  "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
+  "fieldConfig": {
+    "defaults": { "color": { "mode": "fixed", "fixedColor": "red" }, "unit": "reqps" },
+    "overrides": []
+  },
+  "gridPos": { "h": 8, "w": 24, "x": 0, "y": 8 },
+  "id": 3,
+  "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "single" } },
+  "targets": [
+    {
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
+      "expr": "rate(app_errors_total[1m])",
+      "legendFormat": "{{endpoint}}",
+      "refId": "A"
     }
+  ],
+  "title": "Error rate",
+  "type": "timeseries"
+}
   ],
   "refresh": "5s",
   "schemaVersion": 38,
