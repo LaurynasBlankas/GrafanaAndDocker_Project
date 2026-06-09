@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from prometheus_client import Counter, Histogram, make_asgi_app
 import time
 
